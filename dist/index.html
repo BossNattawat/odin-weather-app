@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+<script defer src="main.js"></script></head>
+<body>
+    <header>
+        <h1>Weather App</h1>
+        <p>Type a city in the form bellow to see the current temperature.</p>
+    </header>
+
+    <main>
+        <form>
+            <input type="text" id="city" required>
+            <button id="search" type="submit">Search</button>
+        </form>
+
+        <div class="resultWrapper" id="resultWrapper">
+            <h1 id="cityName"></h1>
+            <div class="resultTemp">
+                <div class="tempContainer">
+                    <h2 id="temp"></h2>
+                    <p>°C</p>
+                </div>
+            </div>
+            <div class="weatherInfo">
+                <p id="weatherCondition"></p>
+                <p id="description"></p>
+            </div>
+        </div>
+    </main>
+    <div id="loader" style="display: none;"></div>
+
+
+</body>
+</html>

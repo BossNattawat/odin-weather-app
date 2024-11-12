@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+    row-gap: 20px;
+
+    h1{
+        font-size: 3rem;
+    }
+
+    p{
+        font-size: 1.25rem;
+    }
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: calc(100% - 100px);
+    align-items: center;
+    flex-direction: column;
+
+    form{
+        display: flex;
+        column-gap: 10px;
+
+        input{
+            font-size: 1.5rem;
+            padding: 15px;
+            border-radius: 20px
+        }
+
+        button{
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 20px;
+            color: #fefefe;
+            background-color: #4f46e5;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background-color: #4338ca;
+        }
+    }
+
+    .resultWrapper{
+        margin: 50px;
+        border: 2px solid;
+        border-radius: 20px;
+        width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+
+        #cityName{
+            text-align: center;
+            font-size: 1.6rem;
+            margin: 20px 0;
+        }
+
+        .resultTemp{
+            display: flex;
+            text-align: center;
+            margin: 20px 0;
+            align-items: center;
+
+            #emoji{
+                font-size: 4.5rem;
+            }
+
+            .tempContainer{
+                /* position: relative;
+                left: 28px; */
+                display: flex;
+                justify-content: center;
+                h2{
+                    font-size: 5rem;
+                }
+                p{
+                    font-size: 35px;
+                }
+            }
+        }
+
+        .weatherInfo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+            text-align: center;
+
+            p{
+                font-size: 1.15rem;
+                font-weight: lighter;
+            }
+        }
+    }
+
+}
+
+#loader {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #d1d5db;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    animation: spin 2s linear infinite;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+}
+
+.blurred {
+    filter: blur(4px);
+    pointer-events: none;
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
